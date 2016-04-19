@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Waitstaff Calculator</title>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="myCtrl">
+  <h1>Waitstaff Calculator</h1>
+  <hr>
+   <form ng-submit="addTransaction(); results=true; counter=true">
+  <div id="meals">
+    <h1>Meal Details</h1>
+    <h2>Base Meal Price </h2><input type="number" ng-model="price" min="0" step=".01" placeholder="$0.00" required>
+    <h2>Tax Rate </h2><input type="number" ng-model="tax" placeholder="0.00%" min="0" max="100" step=".01" required>
+    <h2>Tip Percentage </h2><input type="number" ng-model="tip" placeholder="0.00%" min="0" max="100" step=".01" required>
+<br>
+<br>
+    <button class="submit" type="submit">Submit</button>
+    <button class="cancel" ng-click="cancel()">Cancel</button>
+  </div>
+</form>
+  <div id="charges">
+    <hr>
+    <h1>Customer Charges</h1>
+    <h2>Subtotal: <span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.subtotal | currency}}</span></h2>
+    <h2>Tip: <span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.tip | currency}}</span></h2>
+    <h2>Total: <span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.total | currency}}</span></h2>
+    <hr>
+  </div>
+  <div id="earnings">
+    <h1>Earnings</h1>
+    <h2>Tip Total:</h2>
+    <h2>Meal Count:</h2>
+    <h2>Average Tip:</h2>
+    <hr>
+  </div>
+  <button>Reset</button>
+</div>
+<script src="https://code.angularjs.org/1.3.10/angular.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
