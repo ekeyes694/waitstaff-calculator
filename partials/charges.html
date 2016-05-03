@@ -1,0 +1,8 @@
+<div id="charges">
+  <hr>
+  <h1>Customer Charges</h1>
+  <h2>Subtotal: <span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.subtotal | currency}}</span></h2>
+  <h2>Tip: <span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.tip | currency}}</span></h2>
+  <h2>Total: <span ng-repeat="meal in meals" ng-show="$index==(mealCount-1)">{{meal.total | currency}}</span></h2>
+  <hr>
+</div>

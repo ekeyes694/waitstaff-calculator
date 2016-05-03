@@ -1,0 +1,12 @@
+<div id="meals">
+    <form ng-submit="addTransaction(); results=true; counter=true">
+        <h1>Meal Details</h1>
+        <h2>Base Meal Price </h2><input type="number" ng-model="price" min="0" step=".01" placeholder="$0.00" required>
+        <h2>Tax Rate </h2><input type="number" ng-model="tax" placeholder="0.00%" min="0" max="100" step=".01" required>
+        <h2>Tip Percentage </h2><input type="number" ng-model="tip" placeholder="0.00%" min="0" max="100" step=".01" required>
+        <br>
+        <br>
+        <button class="submit" type="submit">Submit</button>
+        <button class="cancel" ng-click="cancel()">Cancel</button>
+    </form>
+</div>
