@@ -1,0 +1,35 @@
+button {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.reset {
+    margin-left: 48em;
+    margin-top: 2em;
+}
+
+h1 {
+    margin-left: 1em;
+}
+
+.navlinks {
+    width: 26%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navlinks li {
+    list-style: none;
+    display: inline-flex;
+    margin-left: 1em;
+}
+
+#meals,
+#charges,
+#earnings {
+    width: 21%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: 1em;
+}
