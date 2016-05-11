@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Waitstaff Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body ng-app="myApp">
-    <h1>Waitstaff Calculator</h1>
-    <div ng-controller="navCtrl">
+
+    <div class="navlinks" ng-controller="navCtrl">
+        <h1>Waitstaff Calculator</h1>
         <ul>
             <li><a href="#/details">Meal Details</a></li>
             <li><a href="#/earnings">Earnings</a></li>
@@ -18,7 +20,7 @@
     <hr>
     <div ng-view></div>
 
-    <button>Reset</button>
+    <button class="reset" ng-click='resetAll()'>Reset</button>
 
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
